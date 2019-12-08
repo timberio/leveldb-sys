@@ -9,7 +9,7 @@ documentation = "https://docs.rs/leveldb-sys/"
 license = "MIT"
 
 build = "src/build.rs"
-links = "leveldb"
+links = "leveldb.1.22"
 
 [features]
 snappy = []
