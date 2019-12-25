@@ -15,7 +15,7 @@ dependencies = [
 
 [[package]]
 name = "leveldb-sys"
-version = "2.0.3"
+version = "3.0.0"
 dependencies = [
  "cmake 0.1.42 (registry+https://github.com/rust-lang/crates.io-index)",
  "libc 0.2.65 (registry+https://github.com/rust-lang/crates.io-index)",

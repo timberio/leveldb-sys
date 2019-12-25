@@ -42,9 +42,9 @@ fn build_leveldb(snappy_prefix: Option<PathBuf>) {
         let ldflags = format!("/LIBPATH:{}", snappy_prefix.join("lib").display());
         #[cfg(not(target_env = "msvc"))]
         let ldflags = format!("-L{}", snappy_prefix.join("lib").display());
-        env::set_var("LDFLAGS", ldflags);
         config
             .define("HAVE_SNAPPY", "ON")
+            .define("CMAKE_EXE_LINKER_FLAGS", ldflags)
             .cflag(format!("-I{}", snappy_prefix.join("include").display()))
             .cxxflag(format!("-I{}", snappy_prefix.join("include").display()));
     } else {
